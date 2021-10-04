@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SignUp">
+
+
+    <EditText
+        android:id="@+id/suEmail"
+        android:layout_width="349dp"
+        android:layout_height="58dp"
+        android:background="@drawable/custom_text_box"
+        android:ems="10"
+        android:fontFamily="sans-serif"
+        android:hint="   E-Mail Address "
+        android:inputType="textEmailAddress"
+        android:textAlignment="viewStart"
+        app:layout_constraintBottom_toTopOf="@+id/suPassword"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.71" />
+
+    <EditText
+        android:id="@+id/suPassword"
+        android:layout_width="349dp"
+        android:layout_height="58dp"
+        android:layout_marginBottom="488dp"
+        android:background="@drawable/custom_text_box"
+        android:ems="10"
+        android:hint="  Password "
+        android:inputType="textPassword"
+        android:textAlignment="textStart"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/suEmail"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/suEmail" />
+
+    <Button
+        android:id="@+id/suButton"
+        android:layout_width="279dp"
+        android:layout_height="63dp"
+        android:layout_marginBottom="244dp"
+        android:background="@drawable/custom_button"
+        android:fontFamily="monospace"
+        android:text="S i g n  U P"
+        android:textColor="@color/white"
+        android:textSize="20dp"
+        android:typeface="serif"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/suPassword"
+        app:layout_constraintStart_toStartOf="@+id/suPassword" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginBottom="176dp"
+        android:text=" Already have an account? "
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/suButton" />
+
+    <TextView
+        android:id="@+id/siPageButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="84dp"
+        android:layout_marginBottom="176dp"
+        android:text="Sign  in here."
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/suButton" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
