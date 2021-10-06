@@ -18,16 +18,16 @@
         android:inputType="textEmailAddress"
         android:textAlignment="viewStart"
         app:layout_constraintBottom_toTopOf="@+id/suPassword"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/suAge"
+        app:layout_constraintStart_toStartOf="@+id/suAge"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.71" />
+        app:layout_constraintVertical_bias="0.928" />
 
     <EditText
         android:id="@+id/suPassword"
         android:layout_width="349dp"
         android:layout_height="58dp"
-        android:layout_marginBottom="488dp"
+        android:layout_marginBottom="348dp"
         android:background="@drawable/custom_text_box"
         android:ems="10"
         android:hint="  Password "
@@ -42,7 +42,7 @@
         android:id="@+id/suButton"
         android:layout_width="279dp"
         android:layout_height="63dp"
-        android:layout_marginBottom="244dp"
+        android:layout_marginBottom="228dp"
         android:background="@drawable/custom_button"
         android:fontFamily="monospace"
         android:text="S i g n  U P"
@@ -76,6 +76,44 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="@+id/suButton" />
+
+    <EditText
+        android:id="@+id/suName"
+        android:layout_width="349dp"
+        android:layout_height="58dp"
+        android:layout_marginStart="31dp"
+        android:layout_marginTop="89dp"
+        android:layout_marginEnd="31dp"
+        android:layout_marginBottom="22dp"
+        android:background="@drawable/custom_text_box"
+        android:ems="10"
+        android:hint="Name"
+        android:inputType="textPersonName"
+        android:paddingStart="16dp"
+        app:layout_constraintBottom_toTopOf="@+id/suAge"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <EditText
+        android:id="@+id/suAge"
+        android:layout_width="349dp"
+        android:layout_height="58dp"
+        android:layout_marginBottom="21dp"
+        android:background="@drawable/custom_text_box"
+        android:ems="10"
+        android:hint="Age"
+        android:inputType="textPersonName"
+        android:paddingStart="16dp"
+        android:text=""
+        app:layout_constraintBottom_toTopOf="@+id/suEmail"
+        app:layout_constraintEnd_toEndOf="@+id/suName"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/suName"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -22,7 +22,7 @@ import java.util.Objects;
 
 public class SignUp extends AppCompatActivity {
 
-    EditText emailId, password, dob;
+    EditText emailId, password, ageId, nameId;
     Button signUp;
     TextView switchToSignIn;
 
@@ -36,8 +36,11 @@ public class SignUp extends AppCompatActivity {
 
 
         mAuth = FirebaseAuth.getInstance();
+        nameId = findViewById(R.id.suName);
+        ageId = findViewById(R.id.suAge);
         emailId = findViewById(R.id.suEmail);
         password = findViewById(R.id.suPassword);
+
 
         signUp = findViewById(R.id.suButton);
         switchToSignIn = findViewById(R.id.siPageButton);
@@ -57,8 +60,11 @@ public class SignUp extends AppCompatActivity {
         signUp.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                String name = nameId.getText().toString().trim();
+                String age = ageId.getText().toString().trim();
                 String email = emailId.getText().toString().trim();
                 String pwd = password.getText().toString().trim();
+
 
 
                 if (email.isEmpty()) {
@@ -85,7 +91,7 @@ public class SignUp extends AppCompatActivity {
 
 
                                         if (task.isSuccessful()) {
-                                            User user = new User(email, pwd);
+                                            User user = new User(email, pwd, age, name);
 
                                             FirebaseDatabase.getInstance().getReference("Users")
                                                     .child(Objects.requireNonNull(FirebaseAuth.getInstance().getCurrentUser()).getUid())
